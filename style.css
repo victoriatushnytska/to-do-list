@@ -165,28 +165,6 @@
     font-size: 1rem;
   }
   
-  .footer {
-    display: flex;
-    gap: 1.8rem;
-    background-color: var(--white);
-    padding: 1.2rem;
-    border-radius: 0.5rem;
-  }
-  
-  .made-by,
-  .author {
-    font-size: 0.9rem;
-  }
-  
-  .made-by {
-    color: var(--grey-dark);
-  }
-  
-  .author {
-    color: var(--blue);
-    font-weight: bold;
-  }
-  
   .scroll {
     height: 15rem;
     scrollbar-width: thin;
