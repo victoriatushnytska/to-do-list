@@ -76,6 +76,35 @@ function toggleTask(index) {
   displayTasks();
 }
 
+function deleteTask(index) {
+  todo.splice(index, 1); 
+  saveToLocalStorage(); 
+  displayTasks(); 
+}
+
+function displayTasks() {
+  todoList.innerHTML = "";
+  todo.forEach((item, index) => {
+    const p = document.createElement("p");
+    p.innerHTML = `
+      <div class="todo-container">
+        <input type="checkbox" class="todo-checkbox" id="input-${index}" ${
+      item.disabled ? "checked" : ""
+    }>
+        <p id="todo-${index}" class="${
+      item.disabled ? "disabled" : ""
+    }" onclick="editTask(${index})">${item.text}</p>
+        <button class="delete-btn" onclick="deleteTask(${index})">🗑️</button>
+      </div>
+    `;
+    p.querySelector(".todo-checkbox").addEventListener("change", () =>
+      toggleTask(index)
+    );
+    todoList.appendChild(p);
+  });
+  todoCount.textContent = todo.length;
+}
+
 function deleteAllTasks() {
   todo = [];
   saveToLocalStorage();
