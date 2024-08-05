@@ -2,15 +2,15 @@
     --gradient: linear-gradient(
       180deg,
       rgba(45, 112, 1253, 0.73) 0%,
-      #163e92 100%
+      #ffbaf8 100%
     );
     --dark: #001747;
     --grey: #b1bacb;
     --grey-border: rgba(210, 210, 210, 0.75);
     --grey-light: #eeeeee;
     --grey-dark: $405175;
-    --blue: #2d70fd;
-    --green: #00d8a7;
+    --blue: #75a1ff;
+    --green: #007e19;
     --white: #ffffff;
   }
   
@@ -36,6 +36,17 @@
     bottom: 0.5rem;
   }
   
+  .delete-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+  }
+  
   h1,
   h2,
   h3,
@@ -45,8 +56,6 @@
   p {
     margin: 0;
   }
-  
-  /* Todo Container */
   
   .todo {
     display: flex;
